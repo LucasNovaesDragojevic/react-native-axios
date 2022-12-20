@@ -11,8 +11,8 @@ export async function pegarRepositoriosDoUsuario(id) {
     }
 }
 
-export async function pegarRepositoriosDoUsuarioPeloNome(id, nome) {
-    return await api.get('/repos?postId=${postId}&name=${name}')
+export async function pegarRepositoriosDoUsuarioPeloNome(id, name) {
+    return await api.get(`/repos?postId=${id}&name=${name}`)
                                 .then(response => {
                                     return response.data
                                 }).catch(error => {
